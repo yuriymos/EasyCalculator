@@ -4,7 +4,7 @@ import java.util.Scanner;
  */
 public class InteractRunner {
     /**
-     * Данный метод является точкой входа в программу
+     * This method starts the program.
      * @param args
      */
     public static void main(String [] args){
