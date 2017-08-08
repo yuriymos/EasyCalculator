@@ -40,13 +40,24 @@ public class Calculator {
     }
 
     /**
-     This method to divide arguments.
-     @param params The arguments for dividing
+     * This method to divide arguments.
+     * @param args The arguments for dividing.
+     * @throws Exception
      */
-    public void divide(double... params){
-        this.result = params[0];
-        for(int i = 1; i < params.length; i++){
-            this.result /= params[i];
+    public void divide(double... args) throws Exception{
+        if(args.length > 0) {
+            this.result = args[0];
+            for (int index = 1; index < args.length; index++) {
+                if(args[index] != 0){
+                this.result /= args[index];
+                }
+                else {
+                    throw new Exception("Error! You try to divide to zero.");
+                }
+            }
+        }
+        else {
+            throw new Exception("Error! You should enter more than two arguments.");
         }
     }
 
